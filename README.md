@@ -4,10 +4,18 @@
 ## 專案結構
 ```
 F1_Travel_Analysis/
+├── README.md
 ├── f1_analysis_script.py  # 主要程式碼
-├── f1_travel_analysis_data.csv  # 整合後的每日數據 (輸出)
-├── f1_weekly_sales_by_city.csv  # 整合後的每週數據 (輸出)
-└── README.md
+├── output/
+│   └── chatrs/
+│   │   ├── F1 比賽日與非比賽日旅遊銷售額比較.png
+│   │   ├── 各城市在比賽日與非比賽日平均銷售額.png
+│   │   ├── F1 賽事對各城市旅遊銷售額的提升百分比.png
+│   │   ├── F1 比賽城市銷售額趨勢.png
+│   │   ├── 比賽日各商品類型平均銷售額.png
+└── └── data/
+        ├── repurchase_rate_by_month.csv # 整合後的每日數據 (輸出)
+        └── top_products_by_category.csv # 整合後的每週數據 (輸出)
 ```
 
 ## 專案介紹
@@ -62,7 +70,7 @@ F1_Travel_Analysis/
 **3. F1 賽事對各城市旅遊銷售額的提升百分比（長條圖）**
   - **量化了各城市的影響**：Baku、Singapore 和 Shanghai 的銷售額增長百分比為正值，其中 Baku 增長率最高，顯示其旅遊業在 F1 賽事期間受到的提振最為強勁。Melbourne、Monaco 和 Suzuka 的銷售額增長百分比為負值，其中 Melbourne 降幅最大。這再次印證了在這些城市，F1 賽事似乎未能有效提升旅遊銷售額，甚至可能因某些原因（如人潮集中在賽道周邊，而非一般觀光區域）導致整體銷售額下降。
 - **結論**：這張圖表清晰地顯示了哪些城市是 F1 賽事的主要受益者，而哪些城市可能需要重新評估其旅遊行銷策略。
-![點此查看報表](F1賽事對各城市旅遊銷售額的提升百分比.png)
+![點此查看報表](https://github.com/Debbylihii/F1-analysis-project/blob/6eec7cbcf0f98cbef249beb400bbd4fce64b327d/output/charts/F1%20%E8%B3%BD%E4%BA%8B%E5%B0%8D%E5%90%84%E5%9F%8E%E5%B8%82%E6%97%85%E9%81%8A%E9%8A%B7%E5%94%AE%E9%A1%8D%E7%9A%84%E6%8F%90%E5%8D%87%E7%99%BE%E5%88%86%E6%AF%94.png)
 
 **4. F1 比賽城市銷售額趨勢（7日移動平均）**
   - **賽事前後的熱度波動**：這張圖顯示了各城市在一年中銷售額的起伏。雖然趨勢線波動劇烈，但在每個城市對應的虛線（代表比賽日）附近，可以看到銷售額有時會出現小幅高峰。由於模擬數據的隨機性，趨勢圖的變化沒有非常規律，但可以觀察到一些城市（例如：Baku 的第一個虛線）周圍的銷售額確實有上升。
